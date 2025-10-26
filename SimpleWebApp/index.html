@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movies App (Offline-First)</title>
+  <script src="https://cdn.jsdelivr.net/npm/pouchdb@9.0.0/dist/pouchdb.min.js"></script>
+  <script src="app.js" defer></script>
+  <style>
+    body { font-family: sans-serif; margin: 20px; max-width: 800px; }
+    form { margin-bottom: 20px; }
+    input, textarea { display: block; width: 100%; margin: 5px 0; }
+    button { margin: 5px 0; }
+    .movie { border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <h1>Movies Database (Offline-First)</h1>
+
+  <form id="movie-form">
+    <input type="text" id="name" placeholder="Show Name" required />
+    <textarea id="overview" placeholder="Overview"></textarea>
+    <input type="date" id="first_air_date" placeholder="First Air Date" />
+    <input type="number" step="0.1" id="vote_average" placeholder="Vote Average" />
+    <button type="submit">Add Movie</button>
+  </form>
+
+  <h2>Movies List</h2>
+  <div id="movies"></div>
+</body>
+</html>
